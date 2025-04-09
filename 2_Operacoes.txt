@@ -1,0 +1,23 @@
+// Este algoritmo lê dois números e exibe a soma, subtração, multiplicação e divisão deles
+
+algoritmo "operacoes_aritmeticas"
+var
+   num1, num2: real // Declaração de duas variáveis reais (com casas decimais)
+   soma, subtracao, multiplicacao, divisao: real // Variáveis para guardar os resultados
+inicio
+   escreval("Digite o primeiro número:")
+   leia(num1)
+
+   escreval("Digite o segundo número:")
+   leia(num2)
+
+   num1 + num2 -> soma // Soma os dois números
+   num1 - num2 -> subtracao // Subtrai o segundo do primeiro
+   num1 * num2 -> multiplicacao // Multiplica os dois números
+   num1 / num2 -> divisao // Divide o primeiro pelo segundo
+
+   escreval("Resultado da soma: ", soma)
+   escreval("Resultado da subtração: ", subtracao)
+   escreval("Resultado da multiplicação: ", multiplicacao)
+   escreval("Resultado da divisão: ", divisao)
+fimalgoritmo

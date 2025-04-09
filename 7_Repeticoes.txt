@@ -1,0 +1,29 @@
+// Este algoritmo mostra exemplos das três estruturas de repetição no Visualg
+
+algoritmo "estruturas_de_repeticao"
+var
+   i, numero, soma: inteiro
+inicio
+   // Exemplo 1: PARA (repete de 1 até 5)
+   escreval("=== Contagem de 1 até 5 usando PARA ===")
+   para i de 1 ate 5 faca
+      escreval("Valor de i: ", i)
+   fimpara
+
+   // Exemplo 2: ENQUANTO (repete enquanto o número for menor que 5)
+   escreval("=== ENQUANTO número for menor que 5 ===")
+   numero <- 1
+   enquanto numero < 5 faca
+      escreval("Número: ", numero)
+      numero <- numero + 1
+   fimenquanto
+
+   // Exemplo 3: REPITA...ATE (repete até digitar um número positivo)
+   escreval("=== REPITA até o usuário digitar um número positivo ===")
+   repita
+      escreval("Digite um número positivo:")
+      leia(numero)
+   ate numero > 0
+
+   escreval("Você digitou: ", numero)
+fimalgoritmo

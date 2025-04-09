@@ -1,0 +1,31 @@
+// Este algoritmo mostra como declarar e usar diferentes tipos de variáveis
+
+algoritmo "tipos_de_variaveis"
+var
+   idade: inteiro            // Armazena números inteiros (ex: 10, 25, -3)
+   altura: real              // Armazena números com casas decimais (ex: 1.75)
+   nome: caractere           // Armazena texto ou letras (ex: "João", "A")
+   maiorDeIdade: logico      // Armazena valores booleanos: verdadeiro ou falso
+inicio
+   escreval("Digite seu nome:")
+   leia(nome)
+
+   escreval("Digite sua idade:")
+   leia(idade)
+
+   escreval("Digite sua altura (ex: 1.75):")
+   leia(altura)
+
+   // Verifica se a pessoa é maior de idade
+   idade >= 18 -> maiorDeIdade
+
+   escreval("Olá, ", nome)
+   escreval("Sua idade é: ", idade)
+   escreval("Sua altura é: ", altura)
+
+   se maiorDeIdade entao
+      escreval("Você é maior de idade.")
+   senao
+      escreval("Você é menor de idade.")
+   fimse
+fimalgoritmo

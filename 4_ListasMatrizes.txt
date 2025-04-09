@@ -1,0 +1,34 @@
+// Este algoritmo mostra como usar vetores (listas) e matrizes no Visualg
+
+algoritmo "vetores_e_matrizes"
+var
+   i, j: inteiro                       // Índices para percorrer os vetores e matrizes
+   numeros: vetor[1..5] de inteiro    // Vetor com 5 posições (lista simples)
+   matrizNotas: vetor[1..2, 1..3] de real // Matriz 2x3 (2 linhas, 3 colunas)
+inicio
+   escreval("==== Preenchendo o vetor ====")
+   para i de 1 ate 5 faca
+      escreval("Digite o número da posição ", i, ":")
+      leia(numeros[i])
+   fimpara
+
+   escreval("==== Exibindo o vetor ====")
+   para i de 1 ate 5 faca
+      escreval("numeros[", i, "] = ", numeros[i])
+   fimpara
+
+   escreval("==== Preenchendo a matriz de notas ====")
+   para i de 1 ate 2 faca
+      para j de 1 ate 3 faca
+         escreval("Digite a nota do aluno ", i, " na prova ", j, ":")
+         leia(matrizNotas[i, j])
+      fimpara
+   fimpara
+
+   escreval("==== Exibindo a matriz de notas ====")
+   para i de 1 ate 2 faca
+      para j de 1 ate 3 faca
+         escreval("matrizNotas[", i, ",", j, "] = ", matrizNotas[i, j])
+      fimpara
+   fimpara
+fimalgoritmo

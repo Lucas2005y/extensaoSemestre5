@@ -1,0 +1,15 @@
+// Este algoritmo lê a idade de uma pessoa e informa se ela é maior de idade ou não
+
+algoritmo "verifica_maioridade"
+var
+   idade: inteiro // Variável para armazenar a idade
+inicio
+   escreval("Digite a sua idade:")
+   leia(idade)
+
+   se idade >= 18 entao
+      escreval("Você é maior de idade.") // Se a idade for 18 ou mais
+   senao
+      escreval("Você é menor de idade.") // Se a idade for menor que 18
+   fimse
+fimalgoritmo

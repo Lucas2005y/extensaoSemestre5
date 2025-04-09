@@ -1,0 +1,44 @@
+// Este algoritmo mostra como declarar e usar PROCEDIMENTOS no Visualg
+
+algoritmo "procedimentos_visualg"
+var
+   nome: caractere
+   nota1, nota2: real
+inicio
+   escreval("Digite o nome do aluno:")
+   leia(nome)
+
+   escreval("Digite a primeira nota:")
+   leia(nota1)
+
+   escreval("Digite a segunda nota:")
+   leia(nota2)
+
+   // Chamando o procedimento para exibir os dados
+   exibirDados(nome)
+
+   // Chamando o procedimento para calcular a média
+   calcularMedia(nota1, nota2)
+fimalgoritmo
+
+// Procedimento que recebe o nome e exibe uma saudação
+procedimento exibirDados(aluno: caractere)
+inicio
+   escreval("Olá, ", aluno, "! Vamos calcular sua média.")
+fimprocedimento
+
+// Procedimento que recebe duas notas, calcula a média e informa se foi aprovado
+procedimento calcularMedia(n1, n2: real)
+var
+   media: real
+inicio
+   (n1 + n2) / 2 -> media
+
+   escreval("Sua média é: ", media)
+
+   se media >= 6.0 entao
+      escreval("Parabéns! Você foi aprovado.")
+   senao
+      escreval("Você foi reprovado. Estude mais da próxima vez!")
+   fimse
+fimprocedimento

@@ -1,0 +1,61 @@
+//Objetivo: Criar um pequeno sistema que:
+//Cadastre o nome de 3 alunos
+//Leia 2 notas para cada um
+//Calcule a média de cada aluno com uma função
+//Exiba os resultados com um procedimento
+//Use laços e condicionais pra controlar tudo
+// Sistema simples que cadastra alunos, calcula a média e mostra se foram aprovados
+
+algoritmo "sistema_de_alunos"
+var
+   i: inteiro
+   nomes: vetor[1..3] de caractere
+   nota1, nota2: vetor[1..3] de real
+   medias: vetor[1..3] de real
+inicio
+   // Cadastro e leitura das notas
+   para i de 1 ate 3 faca
+      escreval("Digite o nome do aluno ", i, ":")
+      leia(nomes[i])
+
+      escreval("Digite a primeira nota de ", nomes[i], ":")
+      leia(nota1[i])
+
+      escreval("Digite a segunda nota de ", nomes[i], ":")
+      leia(nota2[i])
+
+      // Calcula a média com a função e armazena
+      calcularMedia(nota1[i], nota2[i]) -> medias[i]
+   fimpara
+
+   // Exibe os resultados
+   para i de 1 ate 3 faca
+      exibirResultado(nomes[i], medias[i])
+   fimpara
+fimalgoritmo
+
+// Função que calcula a média de duas notas
+funcao calcularMedia(n1, n2: real): real
+var
+   media: real
+inicio
+   (n1 + n2) / 2 -> media
+   retorno media
+fimfuncao
+
+// Procedimento que mostra o nome, média e situação do aluno
+procedimento exibirResultado(nome: caractere; media: real)
+inicio
+   escreval("Aluno: ", nome)
+   escreval("Média: ", media)
+
+   se media >= 6.0 entao
+      escreval("Situação: Aprovado")
+   senao
+      escreval("Situação: Reprovado")
+   fimse
+
+   escreval("============================")
+fimprocedimento
+
+

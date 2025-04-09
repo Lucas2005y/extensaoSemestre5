@@ -1,0 +1,32 @@
+// Este algoritmo mostra como declarar e usar FUNÇÕES no Visualg
+
+algoritmo "funcoes_visualg"
+var
+   nota1, nota2, mediaFinal: real
+inicio
+   escreval("Digite a primeira nota:")
+   leia(nota1)
+
+   escreval("Digite a segunda nota:")
+   leia(nota2)
+
+   // Chamando a função que calcula a média e armazenando o retorno
+   calcularMedia(nota1, nota2) -> mediaFinal
+
+   escreval("A média final é: ", mediaFinal)
+
+   se mediaFinal >= 6.0 entao
+      escreval("Aluno aprovado!")
+   senao
+      escreval("Aluno reprovado.")
+   fimse
+fimalgoritmo
+
+// Função que recebe duas notas, calcula e retorna a média
+funcao calcularMedia(n1, n2: real): real
+var
+   media: real
+inicio
+   (n1 + n2) / 2 -> media
+   retorno media
+fimfuncao
